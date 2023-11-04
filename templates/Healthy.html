@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Leaf Doctor</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+
+    }
+    body{
+        background-color: lightgreen;
+    }
+    .container{
+       border: 1px solid black;
+       padding:20px 40px;
+    }
+    .image{
+        width:300px;
+        height: 200px;
+    }
+    .flex-wrapper{
+        display: flex;
+        gap:40px;
+    }
+    .result{
+        
+    }
+    .general-info{
+        margin-top:20px;
+    }
+    .pathogens{
+        margin-top:20px;
+    }
+    .space{
+        margin-top:10px;
+    }
+    .dot{
+        margin-left:20px;
+    }
+    .table{
+        border-collapse:collapse;
+    }
+    table,tr,th,td{
+        border:1px solid black;
+        padding:10px;
+    }
+</style>
+<body>
+    <div class="container">
+       <div class="flex-wrapper">
+            <img class="image" src="{{url_for('static',filename = 'images/Tomato___healthy .JPG' )}}" alt="image">
+            <div class="result-wrapper">
+                <h1 class="result" >{{pred_output}}</h1><h2 class="general-info" >General Info</h2><hr><br>
+                <p>Healthy and Fresh leaf.</p>
+            </div>
+       </div>
+    </body>
+</html>

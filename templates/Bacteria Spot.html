@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Leaf Doctor</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+
+    }
+    body{
+        background-color: lightgreen;
+    }
+    .container{
+       border: 1px solid black;
+       padding:20px 40px;
+    }
+    .image{
+        width:300px;
+        height: 200px;
+    }
+    .flex-wrapper{
+        display: flex;
+        gap:40px;
+    }
+    .result{
+        
+    }
+    .general-info{
+        margin-top:20px;
+    }
+    .pathogens{
+        margin-top:20px;
+    }
+    .space{
+        margin-top:10px;
+    }
+    .dot{
+        margin-left:20px;
+    }
+    .table{
+        border-collapse:collapse;
+    }
+    table,tr,th,td{
+        border:1px solid black;
+        padding:10px;
+    }
+    
+</style>
+<body>
+    <div class="container">
+       <div class="flex-wrapper">
+            <img class="image" src="{{url_for('static',filename = 'images/Tomato___Bacterial_spot.JPG' )}}" alt="image">
+            <div class="result-wrapper">
+                <h1 class="result" >{{pred_output}}</h1>
+                <h2 class="general-info" >General Info</h2><hr><br>
+                <p>Bacterial spot is a serious disease that can affect all above-ground parts of a tomato plant, including the leaves, stems, and fruit. It's especially severe in warm, wet, and windy conditions.</p>
+            </div>            
+       </div>
+       <div>
+        <h1 class="pathogens" >Pathogens</h1><hr><br>
+        <p>Bacterial spot is caused by four species of Xanthomonas and occurs worldwide wherever tomatoes are grown.</p>
+    </div>
+
+    <div>
+        <h1 class="space" >Symptoms & Signs</h1><hr><br>
+        <ul type="dot" class="dot">
+            <li>On tomato, leaf lesions are initially circular and water-soaked and may be surrounded by a faint yellow halo. 
+                <li>In general, spots are dark brown to black and circular on leaves and stems. 
+                    <li>Spots rarely develop to more than 3 mm in diameter. 
+                    <li>Lesions can coalesce causing a blighted appearance of leaves and a general yellowing may occur on leaves with multiple lesions. 
+    </div>
+
+    <div>
+        <h1 class="space" >Diseases Control</h1><hr><br>
+        <table border=' ' class="table">
+            <tr>
+                <th>Product</th>
+                <th>Active Ingredient</th>
+            </tr>
+            <tr>
+                <td>Serenade ASO</td>
+                <td>Bacillus subtilis strain</td>
+            </tr>
+            <tr>
+                <td>LifeGard WG</td>
+                <td>Bacillus mycoides isolate J</td>
+            </tr>
+            <tr>
+                <td>Serifel</td>
+                <td>Bacillus amyloliquefasciens strain MBI 600</td>
+            </tr>
+        </table>
+    </div>
+
+    </div>
+</body>
+</html>

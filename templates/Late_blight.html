@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Leaf Doctor</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+
+    }
+    body{
+        background-color: lightgreen;
+    }
+    .container{
+       border: 1px solid black;
+       padding:20px 40px;
+    }
+    .image{
+        width:300px;
+        height: 200px;
+    }
+    .flex-wrapper{
+        display: flex;
+        gap:40px;
+    }
+    .result{
+        
+    }
+    .general-info{
+        margin-top:20px;
+    }
+    .pathogens{
+        margin-top:20px;
+    }
+    .space{
+        margin-top:10px;
+    }
+    .dot{
+        margin-left:20px;
+    }
+    .table{
+        border-collapse:collapse;
+    }
+    table,tr,th,td{
+        border:1px solid black;
+        padding:10px;
+    }
+    
+</style>
+<body>
+    <div class="container">
+       <div class="flex-wrapper">
+            <img class="image" src="{{url_for('static',filename = 'images/Tomato___Late_blight.JPG' )}}" alt="image">
+            <div class="result-wrapper">
+                <h1 class="result" >{{pred_output}}</h1>
+                <h1 class="general-info" >General Info</h1><hr><br>
+                <p>Late blight (Phytophthora infestans) is one of the most serious fungal diseases that can affect tomatoes and potatoes.Late blight is spread from infected transplants, volunteer potato or tomato plants, and certain weeds botanically related to tomatoes. Spores of this fungus can be airborne and travel great distances in storms. Rain deposits spores onto plants, causing infection. Late blight is favored by cool, wet weather and will cycle repeatedly if weather conditions are favorable.</p>
+            
+            </div>
+
+            
+       </div>
+
+    <div>
+        <h1 class="pathogens" >Pathogens</h1><hr><br>
+        <p>Tomato late blight is caused by the oomycete pathogen Phytophthora infestans (P. infestans). </p>
+    </div>
+
+    <div>
+        <h1 class="space" >Symptoms & Signs</h1><hr><br>
+        <ul type="dot" class="dot">
+            <li>Late blight symptoms include leaf, stem, and fruit lesions that have a water-soaked appearance. <li>The lesions eventually turn brown and the plant looks like it has been frost-damaged or blasted by a blowtorch. <li>Unlike early blight, which typically begins infection on the lower leaves of the tomato plant, late blight infections seem to move from the outside of the canopy inward.
+    </div>
+
+    <div>
+        <h1 class="space" >Diseases Control</h1><hr><br>
+        <table border=' ' class="table">
+            <tr>
+                <th>Product</th>
+                <th>Active Ingredient</th>
+            </tr>
+            <tr>
+                <td>Presidio 4FL</td>
+                <td>Fluopicolide</td>
+            </tr>
+            <tr>
+                <td>Orondis Opti</td>
+                <td>Oxathiapiprolin + chlorothalonil</td>
+            </tr>
+            <tr>
+                <td>Orondis Ultra</td>
+                <td>Oxathiapiprolin + mandidpropamid</td>
+            </tr>
+            <tr>
+                <td>Previcur Flex</td>
+                <td>Propamocarb </td>
+            </tr>
+            <tr>
+                <td>Ranman 3.6SC</td>
+                <td>Cyazofamid</td>
+            </tr>
+        </table>
+    </div>
+
+    </div>
+</body>
+</html>

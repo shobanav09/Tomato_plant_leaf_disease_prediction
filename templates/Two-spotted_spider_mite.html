@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Leaf Doctor</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+
+    }
+    body{
+        background-color: lightgreen;
+    }
+    .container{
+       border: 1px solid black;
+       padding:20px 40px;
+    }
+    .image{
+        width:300px;
+        height: 200px;
+    }
+    .flex-wrapper{
+        display: flex;
+        gap:40px;
+    }
+    .result{
+        
+    }
+    .general-info{
+        margin-top:20px;
+    }
+    .pathogens{
+        margin-top:20px;
+    }
+    .space{
+        margin-top:10px;
+    }
+    .dot{
+        margin-left:20px;
+    }
+    .table{
+        border-collapse:collapse;
+    }
+    table,tr,th,td{
+        border:1px solid black;
+        padding:10px;
+    }
+    
+</style>
+<body>
+    <div class="container">
+       <div class="flex-wrapper">
+            <img class="image" src="{{url_for('static',filename = 'images/Tomato___Spider_mites.JPG' )}}" alt="image">
+            <div class="result-wrapper">
+                <h1 class="result" >{{pred_output}}</h1><h2 class="general-info" >General Info</h2><hr><br>
+                <p>Two-spotted spider mites are pests that can cause serious damage to some vegetable crops, including tomatoes. They can occur in hot, dry weather.</p>
+            </div>         
+       </div>
+       <div>
+        <h1 class="pathogens" >Pathogens</h1><hr><br>
+        <p>The most effective natural control of the two-spotted spider mite is the fungal pathogen, Neozygites floridana.</p>
+    </div>
+
+    <div>
+        <h1 class="space" >Symptoms & Signs</h1><hr><br>
+        <ul type="dot" class="dot">
+            <li>White speckles on leaves
+                <li>A stippled appearance of the foliage
+                <li>Necrotic spots on leaf tissue
+                <li>Leaves turning yellow or gray and collapsing
+                <li>Foliage becoming pale green, yellowish, or whitish in large patches
+                <li>Leaves turning brownish in large patches or overall and dropping prematurely 
+    </div>
+
+    <div>
+        <h1 class="space" >Diseases Control</h1><hr><br>
+        <table border=' ' class="table">
+            <tr>
+                <th>Product</th>
+                <th>Active Ingredient</th>
+            </tr>
+            <tr>
+                <td>Endura</td>
+                <td>Boscalid</td>
+            </tr>
+            <tr>
+                <td>Ariston</td>
+                <td>Chlorothalonil + cymoxanil</td>
+            </tr>
+            <tr>
+                <td>Inspire Super 2.09SC</td>
+                <td>Difenoconazole + cyprodinilG</td>
+            </tr>
+        </table>
+    </div>
+
+    </div>
+</body>
+</html>
+    </div>
+</body>
+</html>

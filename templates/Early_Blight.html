@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Leaf Doctor</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+
+    }
+    body{
+        background-color: lightgreen;
+    }
+    .container{
+       border: 1px solid black;
+       padding:20px 40px;
+    }
+    .image{
+        width:300px;
+        height: 200px;
+    }
+    .flex-wrapper{
+        display: flex;
+        gap:40px;
+    }
+    .result{
+        
+    }
+    .general-info{
+        margin-top:20px;
+    }
+    .pathogens{
+        margin-top:20px;
+    }
+    .space{
+        margin-top:10px;
+    }
+    .dot{
+        margin-left:20px;
+    }
+    .table{
+        border-collapse:collapse;
+    }
+    table,tr,th,td{
+        border:1px solid black;
+        padding:10px;
+    }
+    
+</style>
+<body>
+    <div class="container">
+       <div class="flex-wrapper">
+            <img class="image" src="{{url_for('static',filename = 'images/Tomato___Early_blight.JPG' )}}" alt="image">
+            <div class="result-wrapper">
+                <h1 class="result" >{{pred_output}}</h1>
+                <h2 class="general-info" >General Info</h2><hr><br>
+                <p>Early blight, caused by the fungal pathogen Alternaria solani, is one of the most common tomato diseases. It brings significant damage to tomato leaves, stems, and fruits almost yearly in West Virginia. Early blight can also affect potato foliage.</p>
+            
+            </div>
+
+            
+       </div>
+
+    <div>
+        <h1 class="pathogens" >Pathogens</h1><hr><br>
+        <p>Early blight of tomato is caused primarily by the fungus Alternaria linariae, although other species of Alternaria may be isolated from lesions. </p>
+    </div>
+
+    <div>
+        <h1 class="space" >Symptoms & Signs</h1><hr><br>
+        <ul type="dot" class="dot">
+            <li>Early blight is identified by the appearance of a few (5 to 10 in most cases) circular brown spots on a leaf. 
+                <li>The spots are up to a half-inch in diameter, with concentric rings or ridges that form a target-like pattern surrounded by a yellow halo. 
+                <li>As the disease progresses, spots merge together and may kill the whole leaf. Over time, the stem and fruit may also be infected, showing dark and sunken spots. 
+                    <li>Cankers with a similar dark and sunken target-like appearance are often found at or above the soil line on the stem
+    </div>
+
+    <div>
+        <h1 class="space" >Diseases Control</h1><hr><br>
+        <table border=' ' class="table">
+            <tr>
+                <th>Product</th>
+                <th>Active Ingredient</th>
+            </tr>
+            <tr>
+                <td>Quadris Opti</td>
+                <td>azoxystrobin + chlorothalonil</td>
+            </tr>
+            <tr>
+                <td>Endura</td>
+                <td>boscalid</td>
+            </tr>
+            <tr>
+                <td>Bravo</td>
+                <td>chlorothalonil</td>
+            </tr>
+            <tr>
+                <td>Aprovia Top</td>
+                <td>difenoconazole + benzovindiflupyr</td>
+            </tr>
+            <tr>
+                <td>Quadris Top</td>
+                <td>azoxystrobin + difenoconazole</td>
+            </tr>
+        </table>
+    </div>
+
+    </div>
+</body>
+</html>

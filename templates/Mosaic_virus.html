@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Leaf Doctor</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+
+    }
+    body{
+        background-color: lightgreen;
+    }
+    .container{
+       border: 1px solid black;
+       padding:20px 40px;
+    }
+    .image{
+        width:300px;
+        height: 200px;
+    }
+    .flex-wrapper{
+        display: flex;
+        gap:40px;
+    }
+    .result{
+        
+    }
+    .general-info{
+        margin-top:20px;
+    }
+    .pathogens{
+        margin-top:20px;
+    }
+    .space{
+        margin-top:10px;
+    }
+    .dot{
+        margin-left:20px;
+    }
+    .table{
+        border-collapse:collapse;
+    }
+    table,tr,th,td{
+        border:1px solid black;
+        padding:10px;
+    }
+    
+</style>
+<body>
+    <div class="container">
+       <div class="flex-wrapper">
+            <img class="image" src="{{url_for('static',filename = 'images/Tomato___Tomato_mosaic_virus.JPG' )}}" alt="image">
+            <div class="result-wrapper">
+                <h1 class="result" >{{pred_output}}</h1><hr><br>
+            </div>
+        </div>
+        <div>
+            <h1 class="pathogens" >Pathogens</h1><hr><br>
+            <p>Leaf mold is caused by the fungus Passalora fulva. It is not known to be pathogenic on any plant other than tomato.</p>
+        </div>
+    
+        <div>
+            <h1 class="space" >Symptoms & Signs</h1><hr><br>
+            <ul type="dot" class="dot">
+                <li>Disease symptoms first appear after seven days as light green spots on leaves. 
+                    <li>Soon after, olive-green asexual conidia emerge, and eventually the spots become necrotic. 
+                        <li>Disease symptoms appear first on the lower leaves of tomato plants. 
+                            <li>Fruit production may not be severely hampered during the earlier stages of disease, but over time, disease severity increases and defoliation occurs. 
+                                <li>Proper identification of disease is important. 
+                  <li>Abiotic conditions such as magnesium deficiency and the beginning stages of other diseases can produce similar symptoms to tomato leaf mold.
+        </div>
+    
+        <div>
+            <h1 class="space" >Diseases Control</h1><hr><br>
+            <table border=' ' class="table">
+                <tr>
+                    <th>Product</th>
+                    <th>Active Ingredient</th>
+                </tr>
+                <tr>
+                    <td>Endura</td>
+                    <td>Boscalid</td>
+                </tr>
+                <tr>
+                    <td>Ariston</td>
+                    <td>Chlorothalonil + cymoxanil</td>
+                </tr>
+                <tr>
+                    <td>Inspire Super 2.09SC</td>
+                    <td>Difenoconazole + cyprodinilG</td>
+                </tr>
+            </table>
+        </div>
+    
+        </div>
+    </body>
+    </html>
+    </div>
+</body>
+</html>
